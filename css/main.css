@@ -1,0 +1,809 @@
+﻿/*
+Theme Name: GamerStuff
+Theme URI:  http://www.gamertuff.fr/
+Description:GamerStuff Main CSS
+Author:     David Craff
+*/
+
+
+/* ==========================================================================
+   TYPO
+   ========================================================================== */
+    @font-face {
+        font-family:'droid_sans';
+        src:url('/wp-content/themes/gamerstuff/font/droidsans-webfont.woff2') format('woff2'),
+             url('/wp-content/themes/gamerstuff/font/droidsans-webfont.woff') format('woff');
+        font-weight:normal;
+        font-style:normal;
+    }
+    html,
+    body{
+        font-family:droid_sans, sans-serif;
+    }
+    h1,.h1-like,
+    h2,.h2-like,
+    h3,.h3-like,
+    h4,.h4-like,
+    h4,.h5-like,
+    h6,.h6-like{
+        font-family:droid_sans, sans-serif;
+        font-weight:normal;
+    }
+
+
+/* ==========================================================================
+   Title Text & Typo
+   ========================================================================== */
+    h1{
+        margin:0 0 10px;
+        padding:0 0 10px;
+    }
+    a{
+        color:#FF540A;
+        text-decoration:none;
+    }
+    a:visited{
+        color:#555;
+    }
+    a:hover{
+        color:#FF540A;
+    }
+
+    .thumbnail{
+        border: 1px solid #ededed;
+        border-radius: 5px;
+        padding: 2px;
+    }
+
+
+/* ==========================================================================
+   Wordpress core css
+   ========================================================================== */
+    .alignnone {
+        margin:5px 20px 20px 0;
+    }
+    .aligncenter,
+    div.aligncenter {
+        display:block;
+        margin:5px auto 5px auto;
+    }
+    .alignright {
+        float:right;
+        margin:5px 0 20px 20px;
+    }
+    .alignleft {
+        float:left;
+        margin:5px 20px 20px 0;
+    }
+    a img.alignright {
+        float:right;
+        margin:5px 0 20px 20px;
+    }
+    a img.alignnone {
+        margin:5px 20px 20px 0;
+    }
+    a img.alignleft {
+        float:left;
+        margin:5px 20px 20px 0;
+    }
+    a img.aligncenter {
+        display:block;
+        margin-left:auto;
+        margin-right:auto
+    }
+    .wp-caption {
+        background:#fff;
+        border:1px solid #f0f0f0;
+        max-width:96%; /* Image does not overflow the content area */
+        padding:5px 3px 10px;
+        text-align:center;
+    }
+        .wp-caption img {
+            border:0 none;
+            height:auto;
+            margin:0;
+            max-width:98.5%;
+            padding:0;
+            width:auto;
+        }
+        .wp-caption p.wp-caption-text {
+            font-size:1.2rem;
+            line-height:1.8rem;
+            margin:0;
+            padding:0 4px 5px;
+        }
+    .wp-caption.alignnone {
+        margin:5px 20px 20px 0;
+    }
+    .wp-caption.alignleft {
+        margin:5px 20px 20px 0;
+    }
+    .wp-caption.alignright {
+        margin:5px 0 20px 20px;
+    }
+    .screen-reader-text {
+        clip:rect(1px, 1px, 1px, 1px);
+        position:absolute !important;
+        height:1px;
+        width:1px;
+        overflow:hidden;
+    }
+        .screen-reader-text:focus {
+            background-color:#f1f1f1;
+            border-radius:3px;
+            box-shadow:0 0 2px 2px rgba(0, 0, 0, 0.6);
+            clip:auto !important;
+            color:#21759b;
+            display:block;
+            font-size:0.875rem;
+            font-weight:bold;
+            height:auto;
+            left:5px;
+            line-height:normal;
+            padding:15px 23px 14px;
+            text-decoration:none;
+            top:5px;
+            width:auto;
+            z-index:100000;
+        }
+    .gallery-caption {
+        color:#707070;
+        color:rgba(51, 51, 51, 0.7);
+        display:block;
+        font-family:"Noto Sans", sans-serif;
+        font-size:1.2rem;
+        line-height:1.5;
+        padding:0.5em 0;
+    }
+    .sticky{
+        background:red;
+    }
+    .bypostauthor{
+        border: 1px dashed #ff540a;
+    }
+
+
+/* ==========================================================================
+   Container
+   ========================================================================== */
+    .container{
+        clear:both;
+        margin:0 auto;
+        max-width:1300px;
+    }
+        .content{
+            padding:20px 10px;
+        }
+        .single h1{
+            border-bottom:1px dotted #aaa;
+            margin:0;
+        }
+        .single h2{
+            margin:40px 0 10px;
+        }
+        .category h1 p{
+            display: inline-block;
+        }
+        .category h2{
+            background: #dcdcdc;
+            padding:0 10px;
+        }
+        .bloc-type-1 h2{
+            background:#FF540A;
+            color:#fff;
+        }
+        .bloc-type-1 > div{
+            clear:both;
+            padding-top:20px;
+        }
+            .first-post{
+                min-height: 290px;
+            }
+                .first-post img{
+                    float:left;
+                    height:290px;
+                    margin-right:20px;
+                    width: 570px;
+                }
+                .first-post h3{
+                    font-size: 2.8rem;
+                    line-height: 3.5rem;
+                }
+            .other-post{
+
+            }
+                .other-post img{
+                    height: 178px;
+                    width: 178px;
+                }
+                .other-post h3{
+                    font-size: 1.4rem;
+                }
+                .other-post:last-child{
+                    margin-right: 0;
+                }
+        .cat-left-sidebar ul{
+            padding:0;
+        }
+
+
+/* ==========================================================================
+   Review Filter
+   ========================================================================== */
+    .filters{
+        background: #ededed;
+        border: 1px solid #dcdcdc;
+        padding: 10px;
+    }
+        .filters button{
+            background: none;
+            border-radius: 5px;
+            box-shadow: none;
+            color:#000;
+        }
+        .filters .is-checked{
+            background-color:#FF540A;
+            color:#fff;
+        }
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+    header{
+        background:#ededed;
+        border-bottom:1px dotted #aaa;
+        height:112px;
+        padding:10px 0;
+    }
+        .logo{
+            display:block;
+            margin:4px 20px 0 10px;
+        }
+
+    nav{
+        border-bottom:3px solid #FF540A;
+        height:44px;
+    }
+        .search-input{
+            border:1px solid #ccc;
+            margin:5px 4px 0 0;
+            padding:4px 10px;
+            width:300px;
+        }
+
+
+/* ==========================================================================
+   Main Menu
+   ========================================================================== */
+    .menu-navigation-container{
+        float:left;
+    }
+    #menu-navigation{
+        padding:0;
+    }
+        #menu-navigation li{
+            float:left;
+            list-style-type:none;
+            position:relative;
+        }
+        #menu-navigation a{
+            color:#333;
+            display:block;
+            padding:10px;
+        }
+        #menu-navigation a:hover,
+        #menu-navigation .current-post-ancestor > a,
+        #menu-navigation .current-category-ancestor > a,
+        #menu-navigation .current-menu-ancestor > a,
+        #menu-navigation .current-menu-parent > a,
+        #menu-navigation .current-category-parent > a,
+        #menu-navigation .current-menu-item > a{
+            background:#FF540A;
+            color:#fff;
+        }
+        #menu-navigation > li:last-child{
+            border-left:1px dotted #aaa;
+            border-right:1px dotted #aaa;
+        }
+            #menu-navigation > li:last-child a:hover{
+                background:#ededed;
+                color:#333;
+            }
+        #menu-navigation li ul{
+            background:#dcdcdc;
+            box-shadow:1px 5px 11px rgba(0,0,0,0.3);
+            padding:0;
+            position:absolute;
+            top:41px;
+            width:200px;
+            z-index:1000;
+        }
+            #menu-navigation li li{
+                float:none;
+                display:none;
+            }
+                #menu-navigation li:hover li{
+                    display:block;
+                }
+
+
+/* ==========================================================================
+   Breadcrumbs
+   ========================================================================== */
+    #breadcrumbs{
+        border-bottom:1px dotted #dcdcdc;
+        color:#aaa;
+        font-size:0.8em;
+        padding:0 20px;
+    }
+        #breadcrumbs .container{
+            padding-left:10px;
+        }
+        #breadcrumbs a{
+            color:#aaa;
+        }
+            #breadcrumbs a:hover{
+                color:#555;
+            }
+
+
+/* ==========================================================================
+   Post
+   ========================================================================== */
+
+    .article-info{
+        border-bottom:1px dotted #aaa;
+        list-style-type:none;
+        margin:0 0 20px;
+        overflow:hidden;
+        padding:0;
+    }
+        .article-info li,
+        .article-info a{
+            color:#aaa;
+        }
+        .article-info li{
+            border-right:1px dotted #aaa;
+            float:left;
+            font-size:0.9em;
+            padding:2px 10px;
+        }
+        .article-info a:hover{
+            color:#555;
+        }
+        .article-info .fa{
+            margin-right:5px;
+        }
+
+    .size-post-thumbnail{
+        width:100%;
+    }
+
+
+/* ==========================================================================
+   Review Post
+   ========================================================================== */
+
+    .go-to-bilan {
+        background:#ddd;
+        display:block;
+        font-size:1.2rem;
+        margin-bottom:40px;
+        margin-top:5px;
+        padding:5px;
+        position:relative;
+        text-align:center;
+    }
+
+    .go-to-bilan:after {
+        border:solid transparent;
+        border-top-color:#ddd;
+        border-width:15px;
+        content:" ";
+        font-size:0;
+        height:0;
+        left:48%;
+        line-height:0;
+        position:absolute;
+        pointer-events:none;
+        top:28px;
+        transform:rotate(360deg);
+        width:0;
+    }
+
+
+    /****** Review ******/
+    #review-bilan {
+        background:#e5e5e5;
+        border:3px solid #fff;
+        box-shadow:0 0 5px 1px rgba(34,34,34,0.1);
+        margin:20px 0 0;
+        padding:0 20px 10px;
+        overflow:hidden;
+    }
+
+    #review-bilan h2 {
+        padding-top:10px;
+    }
+    .review-col-more {
+        float:left;
+        width:50%;
+    }
+
+    .review-col-more p {
+        background:#ccc;
+        font-weight:bold;
+        margin:10px 10px 5px;
+        padding:5px 10px;
+    }
+
+    .review-col-more ul {
+        margin-left:10px;
+    }
+
+    /****** Buy It ******/
+    .buyIt {
+        background:#fff;
+        border:2px dashed #ff540a;
+        margin:10px 0 20px;
+        padding:10px 20px;
+        overflow:hidden;
+    }
+
+    .buyIt h2 {
+        margin-top:0;
+        padding-top:0;
+    }
+
+    .buyIt table {
+        margin-bottom:0;
+    }
+
+    .buyIt td {
+        background:inherit !important;
+    }
+
+
+/* ==========================================================================
+   List post
+   ========================================================================== */
+    .post-list{
+        list-style-type:none;
+        margin:0 -10px 10px;
+        overflow:hidden;
+        padding:0;
+    }
+       .post-list li{
+            float:left;
+            height: 250px;
+            margin: 8px;
+            width: 200px;
+        }
+            .post-list a{
+                color:#000;
+            }
+            .post-list li:hover{
+                box-shadow:0px 0px 4px rgba(0,0,0,0.5);
+            }
+            .post-list .post-title{
+                max-height: 50px;
+                overflow: hidden;
+                padding: 5px;
+            }
+            .post-list .thumbnail{
+                background: #aaa;
+                height:200px;
+                width:200px;
+            }
+
+            .debug-custom-field{
+                background: rgba(0,0,0,0.5);
+                color: #fff;
+                padding: 5px;
+                position: absolute;
+                top: 0;
+                z-index: 1000;
+            }
+
+
+/* ==========================================================================
+   News list
+   ========================================================================== */
+    .news-col ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+        .news-col li{
+            border-bottom:1px solid #ededed;
+            clear:both;
+            margin-bottom:10px;
+            min-height: 90px;
+        }
+            .news-col li:last-child{
+                border:none;
+            }
+            .news-col img{
+                display:block;
+                float:left;
+                height:80px;
+                margin-right:20px;
+                width:80px;
+            }
+
+
+/* ==========================================================================
+   Reviews Cat
+   ========================================================================== */
+    .reviews-cat{
+        background: #ededed;
+        border-top: 3px dashed #aaa;
+        border-bottom: 3px solid #aaa;
+        padding: 10px 0 20px;
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
+        .reviews-cat h2{
+            background: none;
+        }
+        .reviews-cat a{
+            text-align: center;
+        }
+
+
+/* ==========================================================================
+   Comments
+   ========================================================================== */
+    #comments{
+        border: 1px dotted #dcdcdc;
+        padding: 10px;
+        margin-top: 20px;
+    }
+        #comments h2{
+            margin-top: 0;
+        }
+        #comments ul{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+        }
+            #comments li{
+                clear:both;
+                    position: relative;
+            }
+                .comment{
+                    margin-bottom:10px;
+                    min-height: 80px;
+                    overflow: hidden;
+                }
+                #comments .even{
+                    background: #ededed;
+                }
+                #comments .odd{
+                    background: #fff;
+                }
+                #comments .avatar{
+                    float:left;
+                    margin-right: 10px;
+                }
+                #comments .children{
+                    margin-left:90px;
+                }
+                .comment-content{
+                    margin-left:90px;
+                    padding:10px 10px 10px 0;
+                }
+                .comment-meta{
+                    color:#555;
+                    font-size:1rem;
+                    position: absolute;
+                    right:5px;
+                    top:5px;
+                }
+                .comment-author,
+                .comment-author a{
+                    color:#999;
+                }
+                .reply{
+                    color: #999;
+                    font-size: 1.2rem;
+                    float: right;
+                    margin:0 5px -20px 0;
+                }
+                    .reply a{
+                        color:#999;
+                    }
+                    .reply:hover,
+                    .reply:hover a{
+                        color:#ff540a;
+                    }
+
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+    .page-numbers {
+        list-style: none;
+        margin: 0;
+    }
+        .page-numbers:after {
+            clear: both;
+            content: ".";
+            display: block;
+            height: 0;
+            line-height: 0;
+            visibility: hidden;
+        }
+        .page-numbers:hover {
+            text-decoration: none;
+        }
+        .page-numbers li {
+            display: block;
+            float: left;
+            margin: 0 4px 4px 0;
+            text-align: center;
+        }
+            .page-numbers a,
+            .page-numbers span {
+                border: 1px solid #ddd;
+                cursor: pointer;
+                color: #888;
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 400;
+                padding: 0 6px;
+                text-decoration: none;
+            }
+            .page-numbers a span {
+                padding: 0;
+            }
+                .page-numbers a:hover,
+                .page-numbers.current,
+                .page-numbers.current:hover {
+                    background: #ff540a;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            .page-numbers .prev,
+            .page-numbers .next{
+                border:none;
+                font-size:2.2rem;
+            }
+                .page-numbers .prev:hover,
+                .page-numbers .next:hover{
+                    background: none;
+                }
+
+
+/* ==========================================================================
+   Widget
+   ========================================================================== */
+    #sidebar > ul{
+        padding:0;
+    }
+    .widget{
+        list-style-type:none;
+        margin-bottom:20px;
+    }
+        .widget h2{
+            border-bottom:1px dotted #aaa;
+            font-size:2.3rem;
+            margin:0 0 10px;
+            padding:0 5px;
+        }
+
+
+/* ==========================================================================
+   Review Box Taqyeem Plugin CSS Over
+   ========================================================================== */
+    #review-box{
+        margin-top:0 !important;
+        padding:0 !important;
+    }
+        #review-box h2{
+            font-size:2.3rem !important;
+            font-weight:normal !important;
+        }
+        #review-box .review-short-summary{
+            display:none !important;
+        }
+        #review-box .review-final-score{
+            border:none !important;
+            height:85px !important;
+            overflow:hidden !important;
+            position:relative !important;
+            width:100% !important;
+        }
+            #review-box .review-final-score h4{
+                display:none !important;
+            }
+        #review-box .review-item h5{
+            font-weight:normal !important;
+            font-size:1.5rem !important;
+        }
+        #review-box .user-rating-text strong{
+            font-weight:normal !important;
+        }
+
+
+/* ==========================================================================
+   List Review Widget Taqyeem Plugin CSS Over
+   ========================================================================== */
+        ul.reviews-posts{
+            padding:0;
+        }
+            ul.reviews-posts li{
+                padding:5px;
+            }
+                ul.reviews-posts li:nth-child(even){
+                    background:#efefef;
+                }
+                ul.reviews-posts h3{
+                    font-size:1.5rem;
+                    margin:0;
+                }
+                ul.reviews-posts a{
+                    color:#000;
+                }
+
+
+/* ==========================================================================
+   Better Anchor Link Plugin CSS Over
+   ========================================================================== */
+    .mwm-aal-sidebar-container ul{
+        padding:0;
+    }
+        .mwm-aal-sidebar-container li{
+            list-style-type:none;
+            margin:0;
+        }
+            .mwm-aal-sidebar-container li:hover{
+                background:#ddd;
+            }
+            .mwm-aal-sidebar-container a{
+                display:block;
+                padding:4px 10px 4px 25px;
+                position:relative;
+            }
+            .mwm-aal-sidebar-container a:before{
+                content:"\f0da";
+                display:inline-block;
+                font-family:FontAwesome;
+                position:absolute;
+                left:10px;
+            }
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+    footer{
+        background:#555;
+        color:#fff;
+        margin-top:20px;
+        padding-top:20px;
+        position:relative;
+        z-index:600;
+    }
+        footer .container div{
+            margin-left:0;
+            margin-right:2rem;
+        }
+        footer ul{
+            padding:0;
+        }
+        .footer-logo{
+            background:#444;
+            margin:20px 0;
+            padding:40px 0;
+            text-align:center;
+        }
+        .copyright p{
+            padding:0 10px 10px 10px;
+        }
+        .copyright p:last-child{
+            margin-top:0;
+            text-align:right;
+        }
